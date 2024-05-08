@@ -459,8 +459,7 @@ PRODUCT_PACKAGES += \
     android.hardware.wifi.supplicant@1.4.vendor \
     android.hardware.tetheroffload.config@1.0.vendor \
     android.hardware.tetheroffload.control@1.1.vendor \
-    libwifi-hal-wrapper \
-    wpa_supplicant
+    libwifi-hal-wrapper
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/wifi/p2p_supplicant_overlay.conf:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/p2p_supplicant_overlay.conf \
