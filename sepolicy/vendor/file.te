@@ -10,3 +10,6 @@ type sysfs_charge_current, sysfs_type, fs_type;
 
 # Screen rotation orientation
 type sysfs_rotation, sysfs_type, fs_type;
+
+# Torch
+type sysfs_torch, sysfs_type, fs_type;
