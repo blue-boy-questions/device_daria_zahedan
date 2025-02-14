@@ -67,7 +67,7 @@ BOARD_MOVE_RECOVERY_RESOURCES_TO_VENDOR_BOOT := true
 BOARD_INCLUDE_DTB_IN_BOOTIMG := true
 BOARD_VENDOR_RAMDISK_FRAGMENT_NAME := vendor_ramdisk
 
-BOARD_KERNEL_CMDLINE := bootopt=64S3,32N2,64N2 androidboot.hardware=daria
+BOARD_KERNEL_CMDLINE := bootopt=64S3,32N2,64N2 androidboot.hardware=daria androidboot.selinux=permissive
 
 BOARD_MKBOOTIMG_ARGS := --kernel_offset $(BOARD_KERNEL_OFFSET)
 BOARD_MKBOOTIMG_ARGS += --ramdisk_offset $(BOARD_RAMDISK_OFFSET)
