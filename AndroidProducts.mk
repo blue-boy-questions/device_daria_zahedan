@@ -5,13 +5,13 @@
 #
 
 PRODUCT_MAKEFILES := \
-    lineage_zahedan:$(LOCAL_DIR)/zahedan/lineage_zahedan.mk \
-    lineage_algiz:$(LOCAL_DIR)/algiz/lineage_algiz.mk
+    lmodroid_zahedan:$(LOCAL_DIR)/zahedan/lmodroid_zahedan.mk \
+    lmodroid_algiz:$(LOCAL_DIR)/algiz/lmodroid_algiz.mk
 
 COMMON_LUNCH_CHOICES := \
-    lineage_zahedan-user \
-    lineage_zahedan-userdebug \
-    lineage_zahedan-eng \
-    lineage_algiz-user \
-    lineage_algiz-userdebug \
-    lineage_algiz-eng
+    lmodroid_zahedan-user \
+    lmodroid_zahedan-userdebug \
+    lmodroid_zahedan-eng \
+    lmodroid_algiz-user \
+    lmodroid_algiz-userdebug \
+    lmodroid_algiz-eng
