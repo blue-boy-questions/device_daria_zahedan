@@ -144,6 +144,8 @@ PRODUCT_PACKAGES += \
     libexpat.vendor \
     disable_configstore
 
+$(call soong_config_set,surfaceflinger,has_mtk_surfaceflinger,true)
+
 # Fastbootd
 PRODUCT_PACKAGES += \
     fastbootd
