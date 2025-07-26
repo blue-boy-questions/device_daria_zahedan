@@ -116,6 +116,8 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/libs/public.libraries.txt:$(TARGET_COPY_OUT_VENDOR)/etc/public.libraries.txt
 
+$(call soong_config_set,camera,ext_lib,//$(LOCAL_PATH):libcameraservice_extension.zahedan)
+
 # Charger
 PRODUCT_PACKAGES += \
     libsuspend
