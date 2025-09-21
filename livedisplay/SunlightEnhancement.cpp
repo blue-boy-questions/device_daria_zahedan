@@ -1,63 +1,53 @@
 /*
- * Copyright (C) 2022 The LineageOS Project
- *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- *      http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
+ * SPDX-FileCopyrightText: 2022-2025 The LineageOS Project
+ * SPDX-License-Identifier: Apache-2.0
  */
 
 #define LOG_TAG "SunlightEnhancementService"
 
-#include <fstream>
-#include <android-base/file.h>
 #include <android-base/logging.h>
-#include <android-base/strings.h>
-
 #include "SunlightEnhancement.h"
+#include <fstream>
 
+namespace aidl {
 namespace vendor {
 namespace lineage {
 namespace livedisplay {
-namespace V2_1 {
-namespace implementation {
 
 static constexpr const char *kHbmStatePath = "/sys/devices/platform/common_node/hbmstate";
 static constexpr const char *kBrightnessPath = "/sys/devices/platform/14013000.dsi/hbm";
 
-bool SunlightEnhancement::isSupported() {
-    std::ofstream hbm_file(kHbmStatePath);
-    if (!hbm_file.is_open()) {
-        LOG(ERROR) << "Failed to open " << kHbmStatePath << ", error=" << errno
-                   << " (" << strerror(errno) << ")";
-    }
-    return !hbm_file.fail();
-}
-
-Return<bool> SunlightEnhancement::isEnabled() {
-    std::ifstream hbm_file(kHbmStatePath);
+ndk::ScopedAStatus SunlightEnhancement::getEnabled(bool* _aidl_return) {
+    std::ifstream file(kHbmStatePath);
     int result = -1;
-    hbm_file >> result;
-    return !hbm_file.fail() && result > 0;
+    file >> result;
+    LOG(DEBUG) << "Got result " << result << " fail " << file.fail();
+    if (file.fail()) {
+        LOG(ERROR) << "Failed to read current SunlightEnhancement state";
+        return ndk::ScopedAStatus::fromExceptionCode(EX_UNSUPPORTED_OPERATION);
+    }
+    *_aidl_return = result > 0;
+    return ndk::ScopedAStatus::ok();
 }
 
-Return<bool> SunlightEnhancement::setEnabled(bool enabled) {
-    std::ofstream brightness_file(kBrightnessPath);
-    brightness_file << (enabled ? "1" : "0");
-    if (brightness_file.fail())
-        LOG(ERROR) << "Failed to write " << kBrightnessPath;
-    return !brightness_file.fail();
+ndk::ScopedAStatus SunlightEnhancement::setEnabled(bool enabled) {
+    bool isEnabled;
+    if (auto status = getEnabled(&isEnabled); !status.isOk()) {
+        return status;
+    }
+    if (isEnabled != enabled) {
+        std::ofstream file(kBrightnessPath);
+        file << (enabled ? "1" : "0");
+        LOG(DEBUG) << "setEnabled fail " << file.fail();
+        if (file.fail()) {
+            LOG(ERROR) << "Failed to set SunlightEnhancement state";
+            return ndk::ScopedAStatus::fromExceptionCode(EX_UNSUPPORTED_OPERATION);
+        }
+    }
+    return ndk::ScopedAStatus::ok();
 }
 
-}  // namespace implementation
-}  // namespace V2_1
 }  // namespace livedisplay
 }  // namespace lineage
 }  // namespace vendor
+}  // namespace aidl
