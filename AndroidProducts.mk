@@ -5,13 +5,9 @@
 #
 
 PRODUCT_MAKEFILES := \
-    lineage_zahedan:$(LOCAL_DIR)/zahedan/lineage_zahedan.mk \
-    lineage_algiz:$(LOCAL_DIR)/algiz/lineage_algiz.mk
+    $(LOCAL_DIR)/lineage_zahedan.mk
 
 COMMON_LUNCH_CHOICES := \
     lineage_zahedan-user \
     lineage_zahedan-userdebug \
-    lineage_zahedan-eng \
-    lineage_algiz-user \
-    lineage_algiz-userdebug \
-    lineage_algiz-eng
+    lineage_zahedan-eng
