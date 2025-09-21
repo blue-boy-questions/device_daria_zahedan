@@ -12,9 +12,9 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 $(call inherit-product, device/daria/zahedan-unified/device.mk)
 
 # Inherit some common LineageOS stuff.
-$(call inherit-product, vendor/lmodroid/config/common_full_phone.mk)
+$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 
-PRODUCT_NAME := lmodroid_algiz
+PRODUCT_NAME := lineage_algiz
 PRODUCT_DEVICE := algiz
 PRODUCT_MANUFACTURER := Volla
 PRODUCT_BRAND := volla
