@@ -109,7 +109,7 @@ BOARD_MTK_DYNAMIC_PARTITIONS_PARTITION_LIST := system system_ext product vendor 
 BOARD_MTK_DYNAMIC_PARTITIONS_SIZE := 7511998464 # BOARD_SUPER_PARTITION_SIZE - 4MB
 
 # Reserve space for gapps install
--include vendor/lmodroid/config/BoardConfigReservedSize.mk
+-include vendor/lineage/config/BoardConfigReservedSize.mk
 
 BOARD_VENDORIMAGE_FILE_SYSTEM_TYPE := ext4
 BOARD_PRODUCTIMAGE_FILE_SYSTEM_TYPE := ext4
