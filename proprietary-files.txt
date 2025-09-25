@@ -686,9 +686,7 @@ vendor/lib64/libcamalgo.aibc.so
 vendor/lib64/libcamalgo.aihdr.so
 vendor/lib64/libcamalgo.ainr.so
 vendor/lib64/libcamalgo.dngop.so
-vendor/lib64/libcamalgo.dngop.so
 vendor/lib64/libcamalgo.eis.so
-vendor/lib64/libcamalgo.fdft.so
 vendor/lib64/libcamalgo.fdft.so
 vendor/lib64/libcamalgo.fsc.so
 vendor/lib64/libcamalgo.gyro.so
@@ -698,7 +696,6 @@ vendor/lib64/libcamalgo.lsc.so
 vendor/lib64/libcamalgo.mfnr.so
 vendor/lib64/libcamalgo.n3d.so
 vendor/lib64/libcamalgo.nr.so
-vendor/lib64/libcamalgo.platform.so
 vendor/lib64/libcamalgo.platform.so
 vendor/lib64/libcamalgo.platform2.so
 vendor/lib64/libcamalgo.rotate.so
@@ -732,7 +729,6 @@ vendor/lib64/libdynamiclog.so
 vendor/lib64/libeffecthal.base.so
 vendor/lib64/libfcell.so
 vendor/lib64/libfeature.face.so
-vendor/lib64/libfeature.stereo.provider.so
 vendor/lib64/libfeature.stereo.provider.so
 vendor/lib64/libfeature.vsdof.hal.so
 vendor/lib64/libfeature_3dnr.so
@@ -812,7 +808,6 @@ vendor/lib64/libmtkcam_pipelinepolicy-aov.so
 vendor/lib64/libmtkcam_pipelinepolicy-security.so
 vendor/lib64/libmtkcam_pipelinepolicy-smvr.so
 vendor/lib64/libmtkcam_pipelinepolicy.so
-vendor/lib64/libmtkcam_pipelinepolicy_factory.so
 vendor/lib64/libmtkcam_pipelinepolicy_factory.so
 vendor/lib64/libmtkcam_prerelease.so
 vendor/lib64/libmtkcam_rsc.so
@@ -1047,7 +1042,6 @@ vendor/lib64/mt6877/libneuron_runtime.5.so:vendor/lib64/libneuron_runtime.5.so
 vendor/lib64/mt6877/libneuron_runtime.so:vendor/lib64/libneuron_runtime.so
 vendor/lib64/mt6877/libnir_neon_driver.so:vendor/lib64/libnir_neon_driver.so
 vendor/lib64/mt6877/libpq_prot.so:vendor/lib64/libpq_prot.so
-vendor/lib64/arm.graphics-V1-ndk_platform.so
 vendor/lib64/arm.graphics-V1-ndk_platform.so
 vendor/lib64/libDefaultFpsActor.so
 vendor/lib64/libFrameRecord.so
@@ -1407,7 +1401,6 @@ vendor/bin/volte_rcs_ua
 vendor/etc/init/init.vtservice_hidl.rc
 vendor/etc/init/ipsec_mon.rc
 vendor/etc/init/lbs_hidl_service.rc
-vendor/etc/init/vendor.mediatek.hardware.mmagent@1.1-service.rc
 vendor/etc/init/volte_clientapi_ua.rc
 vendor/etc/vintf/manifest/lbs_hidl_service@1.0.xml
 vendor/lib/hw/vendor.mediatek.hardware.videotelephony@1.0-impl.so
@@ -1422,14 +1415,9 @@ vendor/lib64/libipsec_ims_shr.so
 vendor/lib64/libmmagent.so
 vendor/lib64/libmtklimiter_vendor.so
 vendor/lib64/libmtknetcap.so
-vendor/lib64/libmtknetutils.so
-vendor/lib64/libmtkshifter_vendor.so
 vendor/lib64/libmtkspparser.so
-vendor/lib64/libmtksysutils.so
 vendor/lib64/vendor.mediatek.hardware.clientapi@1.0.so
 vendor/lib64/vendor.mediatek.hardware.lbs@1.0.so
-vendor/lib64/vendor.mediatek.hardware.mmagent@1.0.so
-vendor/lib64/vendor.mediatek.hardware.mmagent@1.1.so
 vendor/lib64/vendor.mediatek.hardware.videotelephony@1.0.so
 
 # Keymaster
@@ -1485,7 +1473,6 @@ vendor/lib/libmp3dec_mtk.so
 vendor/lib/libmp4enc_sa.ca7.so
 vendor/lib/libmp4enc_xa.ca7.so
 vendor/lib/libstagefrighthw.so
-vendor/lib/libstagefrighthw.so
 vendor/lib/libthha.so
 vendor/lib/libvcodec_oal.so
 vendor/lib/libvcodec_utility.so
@@ -1514,7 +1501,6 @@ vendor/lib64/libimageio_plat_pipe.so
 vendor/lib64/libjpeg-alpha-oal_vendor.so
 vendor/lib64/libjpeg-alpha_vendor.so
 vendor/lib64/libmp3dec_mtk.so
-vendor/lib64/libstagefrighthw.so
 vendor/lib64/libstagefrighthw.so
 vendor/lib64/libthha.so
 vendor/lib64/libvcodec_oal.so
@@ -1697,13 +1683,10 @@ vendor/lib/libmtkcutils.so
 vendor/lib/libmtkhardware_legacy.so
 vendor/lib/libmtklimiter_vendor.so
 vendor/lib/libmtknetutils.so
-vendor/lib/libmtknetutils.so
 vendor/lib/libmtkperf_client_vendor.so
 vendor/lib/libmtkproperty.so
 vendor/lib/libmtkrillog.so
-vendor/lib/libmtkshifter_vendor.so
 vendor/lib/libmtkspparser.so
-vendor/lib/libmtksysutils.so
 vendor/lib/libmtksysutils.so
 vendor/lib/libsimlock.so
 vendor/lib/libsimmelock.so
@@ -1729,7 +1712,6 @@ vendor/lib64/libmtkconfigutils.so
 vendor/lib64/libmtkcutils.so
 vendor/lib64/libmtkhardware_legacy.so
 vendor/lib64/libmtkmipc-ril.so
-vendor/lib64/libmtknetcap.so
 vendor/lib64/libmtknetutils.so
 vendor/lib64/libmtkproperty.so
 vendor/lib64/libmtkrillog.so
