@@ -422,6 +422,10 @@ BOARD_SHIPPING_API_LEVEL := 30
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.product.first_api_level=33
 
+# Shims
+PRODUCT_PACKAGES += \
+    libbase_shim
+
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \
     $(LOCAL_PATH) \
