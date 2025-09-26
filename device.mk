@@ -85,10 +85,6 @@ PRODUCT_PACKAGES += \
     android.hardware.bluetooth@1.1.vendor \
     android.hardware.bluetooth.audio-impl
 
-# Biometrics
-PRODUCT_PACKAGES += \
-    android.hardware.biometrics.fingerprint@2.3-service.zahedan
-
 # Boot control
 PRODUCT_PACKAGES += \
     android.hardware.boot@1.2-impl \
