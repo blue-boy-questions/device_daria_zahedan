@@ -16,6 +16,13 @@ PRODUCT_PACKAGES += \
 
 # Inherit some common lineage stuff.
 $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
+WITH_GMS := false
+TARGET_INCLUDE_STOCK_ARCORE := false
+TARGET_INCLUDE_STOCK_AICORE := false
+TARGET_SUPPORTS_WALLEFFECT := false
+TARGET_SUPPORTS_GOOGLE_RECORDER := false
+TARGET_INCLUDE_NEXUS := false
+TARGET_HAS_UDFPS := true
 
 PRODUCT_NAME := lineage_zahedan
 PRODUCT_DEVICE := zahedan

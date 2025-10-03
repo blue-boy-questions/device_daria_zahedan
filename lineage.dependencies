@@ -1,14 +1,3 @@
 [
-  {
-    "repository": "LineageOS/android_device_mediatek_sepolicy_vndr",
-    "target_path": "device/mediatek/sepolicy_vndr"
-  },
-  {
-    "repository": "LineageOS/android_hardware_mediatek",
-    "target_path": "hardware/mediatek"
-  },
-  {
-    "repository": "LineageOS/android_kernel_daria_mt6877",
-    "target_path": "kernel/daria/mt6877"
-  }
+
 ]
