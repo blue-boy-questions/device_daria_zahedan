@@ -331,6 +331,8 @@ void BiometricsFingerprint::notify(const fingerprint_msg_t *msg) {
                 if (!thisPtr->mClientCallback->onError(devId, result, vendorCode).isOk()) {
                     ALOGE("failed to invoke fingerprint onError callback");
                 }
+                // Cleanup call on any error (like cancellation)
+                getInstance()->onFingerUp();
             }
             break;
         case FINGERPRINT_ACQUIRED: {
@@ -387,6 +389,7 @@ void BiometricsFingerprint::notify(const fingerprint_msg_t *msg) {
                         token).isOk()) {
                     ALOGE("failed to invoke fingerprint onAuthenticated callback");
                 }
+                // Cleanup call on a successful match   
                 getInstance()->onFingerUp();
             } else {
                 // Not a recognized fingerprint
@@ -396,6 +399,8 @@ void BiometricsFingerprint::notify(const fingerprint_msg_t *msg) {
                         hidl_vec<uint8_t>()).isOk()) {
                     ALOGE("failed to invoke fingerprint onAuthenticated callback");
                 }
+                // Cleanup call on a failed match (mismatch)
+                getInstance()->onFingerUp();
             }
             break;
         case FINGERPRINT_TEMPLATE_ENUMERATING:
