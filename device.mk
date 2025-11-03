@@ -70,7 +70,12 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/audio/audio_policy_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_policy_configuration.xml \
     $(LOCAL_PATH)/configs/audio/audio_policy_volumes.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_policy_volumes.xml \
     $(LOCAL_PATH)/configs/audio/bluetooth_offload_audio_policy_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/bluetooth_offload_audio_policy_configuration.xml \
-    $(LOCAL_PATH)/configs/audio/usb_audio_accessory_only_policy_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/usb_audio_accessory_only_policy_configuration.xml
+    $(LOCAL_PATH)/configs/audio/usb_audio_accessory_only_policy_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/usb_audio_accessory_only_policy_configuration.xml \
+    $(LOCAL_PATH)/etc/init.mt6877.rc:$(TARGET_COPY_OUT_RAMDISK)/init.mt6877.rc \
+    $(LOCAL_PATH)/etc/init.mt6877.vendor.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/hw/init.mt6877.vendor.rc \
+    $(LOCAL_PATH)/etc/fstab.mt6877:$(TARGET_COPY_OUT_VENDOR)/etc/fstab.mt6877 \
+    $(LOCAL_PATH)/etc/ueventd.mtk.rc:$(TARGET_COPY_OUT_VENDOR)/ueventd.mtk.rc \
+    $(LOCAL_PATH)/etc/vendor_init_as_system.rc:$(TARGET_COPY_OUT_VENDOR)/etc/vendor_init_as_system.rc
 
 PRODUCT_COPY_FILES += \
     frameworks/av/services/audiopolicy/config/a2dp_audio_policy_configuration_7_0.xml:$(TARGET_COPY_OUT_VENDOR)/etc/a2dp_audio_policy_configuration.xml \
