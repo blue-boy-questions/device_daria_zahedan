@@ -1,0 +1,7 @@
+on early-init
+    # Mediatek performance and DRAM boost setup
+    write /proc/perfmgr/boost_ctrl/cpu_ctrl/boot_freq "0 0 0 0"
+    write /sys/devices/platform/boot_dramboost/dramboost/dramboost 1
+
+on init
+    setprop vendor.perf.ready 1
