@@ -75,7 +75,8 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/etc/init.mt6877.vendor.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/hw/init.mt6877.vendor.rc \
     $(LOCAL_PATH)/etc/fstab.mt6877:$(TARGET_COPY_OUT_VENDOR)/etc/fstab.mt6877 \
     $(LOCAL_PATH)/etc/ueventd.mtk.rc:$(TARGET_COPY_OUT_VENDOR)/ueventd.mtk.rc \
-    $(LOCAL_PATH)/etc/vendor_init_as_system.rc:$(TARGET_COPY_OUT_VENDOR)/etc/vendor_init_as_system.rc
+    $(LOCAL_PATH)/etc/vendor_init_as_system.rc:$(TARGET_COPY_OUT_VENDOR)/etc/vendor_init_as_system.rc \
+    $(LOCAL_PATH)/prebuilt/dtbo.img:prebuilt/dtbo.img
 
 PRODUCT_COPY_FILES += \
     frameworks/av/services/audiopolicy/config/a2dp_audio_policy_configuration_7_0.xml:$(TARGET_COPY_OUT_VENDOR)/etc/a2dp_audio_policy_configuration.xml \
