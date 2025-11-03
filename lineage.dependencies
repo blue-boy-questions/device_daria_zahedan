@@ -1,14 +1,22 @@
 [
   {
     "repository": "LineageOS/android_device_mediatek_sepolicy_vndr",
-    "target_path": "device/mediatek/sepolicy_vndr"
+    "target_path": "device/mediatek/sepolicy_vndr",
+    "branch": "lineage-23.0"
   },
   {
     "repository": "LineageOS/android_hardware_mediatek",
-    "target_path": "hardware/mediatek"
+    "target_path": "hardware/mediatek",
+    "branch": "lineage-23.0"
   },
   {
-    "repository": "LineageOS/android_kernel_daria_mt6877",
-    "target_path": "kernel/daria/mt6877"
+    "repository": "daria-community/vendor_daria_zahedan",
+    "target_path": "vendor/daria/zahedan",
+    "branch": "itisFarzin/testing/lineage-23.0"
+  },
+  {
+    "repository": "daria-community/kernel_volla_mt6877",
+    "target_path": "kernel/daria/mt6877",
+    "branch": "itisFarzin/testing/lineage-23.0"
   }
 ]
