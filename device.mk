@@ -71,11 +71,6 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/audio/audio_policy_volumes.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_policy_volumes.xml \
     $(LOCAL_PATH)/configs/audio/bluetooth_offload_audio_policy_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/bluetooth_offload_audio_policy_configuration.xml \
     $(LOCAL_PATH)/configs/audio/usb_audio_accessory_only_policy_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/usb_audio_accessory_only_policy_configuration.xml \
-    $(LOCAL_PATH)/rootdir/etc/init.mt6877.rc:$(TARGET_COPY_OUT_RAMDISK)/init.mt6877.rc \
-    $(LOCAL_PATH)/rootdir/etc/init.mt6877.vendor.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/hw/init.mt6877.vendor.rc \
-    $(LOCAL_PATH)/rootdir/etc/fstab.mt6877:$(TARGET_COPY_OUT_VENDOR)/etc/fstab.mt6877 \
-    $(LOCAL_PATH)/rootdir/etc/ueventd.mtk.rc:$(TARGET_COPY_OUT_VENDOR)/ueventd.mtk.rc \
-    $(LOCAL_PATH)/rootdir/etc/vendor_init_as_system.rc:$(TARGET_COPY_OUT_VENDOR)/etc/vendor_init_as_system.rc \
     $(LOCAL_PATH)/prebuilt/dtbo.img:prebuilt/dtbo.img
 
 PRODUCT_COPY_FILES += \
