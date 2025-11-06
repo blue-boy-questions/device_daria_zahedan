@@ -15,6 +15,7 @@ import /vendor/etc/init/hw/init.cgroup.rc
 
 # init.modem.rc must be the LAST rc file because vold.post_fs_data_done is set in it
 import /vendor/etc/init/hw/init.modem.rc
+import /vendor/etc/init/hw/init.mt6877.vendor.rc
 # *** DO NOT import the new rc file after this line ***
 
 on early-init
@@ -27,9 +28,8 @@ on init
     symlink /sdcard /mnt/sdcard
     mkdir /mnt/cd-rom 0000 system system
 
-    import /vendor/etc/init/hw/init.mt6877.vendor.rc
+on post-fs-data
     mount_all /vendor/etc/fstab.mt6877 --early
-
 
 
 # change lk_env permission
