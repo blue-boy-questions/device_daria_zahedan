@@ -86,6 +86,18 @@ BOARD_HAVE_MTK_FM := true
 TARGET_USERIMAGES_USE_F2FS := true
 TARGET_USERIMAGES_USE_EXT4 := true
 
+# Kernel modules
+BOARD_VENDOR_KERNEL_MODULES_LOAD := $(strip $(shell cat $(DEVICE_PATH)/prebuilt/modules/vendor_dlkm/modules.load))
+BOARD_VENDOR_KERNEL_MODULES := $(wildcard $(DEVICE_PATH)/prebuilt/modules/vendor_dlkm/*.ko)
+
+# System DLKM modules
+BOARD_SYSTEM_KERNEL_MODULES_LOAD := $(strip $(shell cat $(DEVICE_PATH)/prebuilt/modules/system_dlkm/modules.load))
+BOARD_SYSTEM_KERNEL_MODULES := $(wildcard $(DEVICE_PATH)/prebuilt/modules/system_dlkm/*.ko)
+
+# # Vendor ramdisk modules
+# BOARD_VENDOR_RAMDISK_KERNEL_MODULES_LOAD := $(strip $(shell cat $(DEVICE_PATH)/prebuilt/modules/vendor_dlkm/modules.load))
+# BOARD_VENDOR_RAMDISK_KERNEL_MODULES := $(wildcard $(DEVICE_PATH)/prebuilt/modules/vendor_dlkm/*.ko)
+
 # Kernel
 TARGET_KERNEL_ARCH := arm64
 TARGET_KERNEL_HEADER_ARCH := arm64
