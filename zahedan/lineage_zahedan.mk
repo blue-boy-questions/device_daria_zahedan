@@ -17,6 +17,7 @@ PRODUCT_PACKAGES += \
 # Inherit some common lineage stuff.
 $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 
+TARGET_HAS_UDFPS := true
 PRODUCT_NAME := lineage_zahedan
 PRODUCT_DEVICE := zahedan
 PRODUCT_MANUFACTURER := Daria

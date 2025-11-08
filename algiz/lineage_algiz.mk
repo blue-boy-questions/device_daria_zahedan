@@ -14,6 +14,7 @@ $(call inherit-product, device/daria/zahedan-unified/device.mk)
 # Inherit some common LineageOS stuff.
 $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 
+TARGET_HAS_UDFPS := true
 PRODUCT_NAME := lineage_algiz
 PRODUCT_DEVICE := algiz
 PRODUCT_MANUFACTURER := Volla
