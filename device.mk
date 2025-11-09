@@ -417,7 +417,12 @@ PRODUCT_PACKAGES += \
     vendor_init_as_system.rc
 
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/rootdir/etc/fstab.mt6877:$(TARGET_COPY_OUT_RECOVERY)/root/first_stage_ramdisk/fstab.mt6877
+    $(LOCAL_PATH)/prebuilt/fstab.mt6877:first_stage_ramdisk/system/etc/fstab.mt6877
+
+PRODUCT_COPY_FILES += \
+    $(DEVICE_PATH)/prebuilt/avb/q-developer-gsi.avbpubkey:first_stage_ramdisk/avb/q-developer-gsi.avbpubkey \
+    $(DEVICE_PATH)/prebuilt/avb/r-developer-gsi.avbpubkey:first_stage_ramdisk/avb/r-developer-gsi.avbpubkey \
+    $(DEVICE_PATH)/prebuilt/avb/s-developer-gsi.avbpubkey:first_stage_ramdisk/avb/s-developer-gsi.avbpubkey
 
 # Shipping API level
 PRODUCT_SHIPPING_API_LEVEL := 31
