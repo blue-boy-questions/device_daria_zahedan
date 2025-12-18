@@ -12,9 +12,22 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 $(call inherit-product, device/daria/zahedan-unified/device.mk)
 
 # Inherit some common LineageOS stuff.
-$(call inherit-product, vendor/lmodroid/config/common_full_phone.mk)
+$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
+# To include Gapps 
+WITH_GMS := true
 
-PRODUCT_NAME := lmodroid_algiz
+# To Build Google(Dailer, Message, Phone) and BCR
+WITH_GMS_COMMS_SUITE := true
+
+# To Add cinematic wallpaer support (only supported in gapps build not in vanilla remove this flag for vanilla builds)
+TARGET_SUPPORTS_WALLEFFECT := true
+
+#Some more GMS Flag
+TARGET_SUPPORTS_GOOGLE_RECORDER := true
+TARGET_INCLUDE_STOCK_ARCORE := true
+TARGET_INCLUDE_STOCK_AICORE := true
+
+PRODUCT_NAME := lineage_algiz
 PRODUCT_DEVICE := algiz
 PRODUCT_MANUFACTURER := Volla
 PRODUCT_BRAND := volla
