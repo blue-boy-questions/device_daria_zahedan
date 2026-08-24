@@ -398,10 +398,12 @@ PRODUCT_PACKAGES += \
     init.modem.rc \
     init.mt6877.rc \
     init.mt6877.usb.rc \
+    init.mt6877.vendor.rc \
     init.project.rc \
     init.recovery.mt6877.rc \
     init.sensor_2_0.rc \
     init.stnfc.rc \
+    factory_init.connectivity.common.rc \
     factory_init.connectivity.rc \
     factory_init.project.rc \
     factory_init.rc \

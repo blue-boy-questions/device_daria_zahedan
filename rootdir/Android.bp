@@ -66,6 +66,14 @@ prebuilt_etc {
     vendor: true,
 }
 
+// Imported by init.mt6877.rc
+prebuilt_etc {
+    name: "init.mt6877.vendor.rc",
+    src: "etc/init.mt6877.vendor.rc",
+    sub_dir: "init/hw",
+    vendor: true,
+}
+
 prebuilt_etc {
     name: "init.project.rc",
     src: "etc/init.project.rc",
