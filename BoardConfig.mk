@@ -173,7 +173,10 @@ BOARD_VENDOR_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/vendor
 SYSTEM_EXT_PRIVATE_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/private
 
 # SPL
-VENDOR_SECURITY_PATCH := 2024-03-05
+# Matches ro.vendor.build.security_patch in the shipping V6.7.2.0.BOND vendor
+# image; a lower value here makes the build claim an older patch level than
+# the blobs it ships.
+VENDOR_SECURITY_PATCH := 2025-07-05
 
 # Verified Boot
 BOARD_AVB_ENABLE := true
