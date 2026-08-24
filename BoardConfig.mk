@@ -98,9 +98,14 @@ BOARD_SYSTEM_KERNEL_MODULES_LOAD := $(strip $(shell cat $(DEVICE_PATH)/prebuilt/
 BOARD_SYSTEM_KERNEL_MODULES := $(wildcard $(DEVICE_PATH)/prebuilt/modules/system_dlkm/*.ko)
 
 # Vendor ramdisk modules
-BOARD_VENDOR_RAMDISK_KERNEL_MODULES_LOAD := $(strip $(shell cat $(DEVICE_PATH)/prebuilt/modules/vendor_dlkm/modules.load))
-BOARD_VENDOR_RAMDISK_KERNEL_MODULES := $(wildcard $(DEVICE_PATH)/prebuilt/modules/vendor_dlkm/*.ko)
-BOARD_VENDOR_RAMDISK_RECOVERY_KERNEL_MODULES_LOAD := $(BOARD_VENDOR_RAMDISK_KERNEL_MODULES_LOAD)
+# These are the modules first-stage init needs before /vendor is mounted, so
+# they are a different (and mostly disjoint) set from the vendor_dlkm one -
+# only 5 of the 176 also live in vendor_dlkm. The lists are the stock
+# lib/modules/modules.load and modules.load.recovery from the shipping
+# vendor_boot ramdisk.
+BOARD_VENDOR_RAMDISK_KERNEL_MODULES_LOAD := $(strip $(shell cat $(DEVICE_PATH)/prebuilt/modules/vendor_ramdisk/modules.load))
+BOARD_VENDOR_RAMDISK_KERNEL_MODULES := $(wildcard $(DEVICE_PATH)/prebuilt/modules/vendor_ramdisk/*.ko)
+BOARD_VENDOR_RAMDISK_RECOVERY_KERNEL_MODULES_LOAD := $(strip $(shell cat $(DEVICE_PATH)/prebuilt/modules/vendor_ramdisk/modules.load.recovery))
 
 # Kernel
 TARGET_KERNEL_ARCH := arm64
