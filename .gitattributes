@@ -1,0 +1,5 @@
+# Kernel module load lists are consumed verbatim by the Android build
+# system on Linux; a CRLF here silently produces bogus module names.
+modules.load          text eol=lf
+modules.load.recovery text eol=lf
+*.ko                  binary
