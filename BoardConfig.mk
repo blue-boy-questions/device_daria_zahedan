@@ -65,9 +65,12 @@ BOARD_RAMDISK_USE_LZ4 := true
 BOARD_INCLUDE_RECOVERY_RAMDISK_IN_VENDOR_BOOT := true
 BOARD_MOVE_RECOVERY_RESOURCES_TO_VENDOR_BOOT := true
 BOARD_INCLUDE_DTB_IN_BOOTIMG := true
-BOARD_VENDOR_RAMDISK_FRAGMENT_NAME := vendor_ramdisk
 
-BOARD_KERNEL_CMDLINE := bootopt=64S3,32N2,64N2 androidboot.hardware=daria androidboot.selinux=permissive
+# BOARD_USES_GENERIC_KERNEL_IMAGE is set, so boot.img only ever gets
+# GENERIC_KERNEL_CMDLINE; this string is passed to mkbootimg as
+# --vendor_cmdline and lands in vendor_boot. It is byte-for-byte the
+# cmdline the stock vendor_boot.img carries.
+BOARD_KERNEL_CMDLINE := bootopt=64S3,32N2,64N2
 
 BOARD_MKBOOTIMG_ARGS := --kernel_offset $(BOARD_KERNEL_OFFSET)
 BOARD_MKBOOTIMG_ARGS += --ramdisk_offset $(BOARD_RAMDISK_OFFSET)
