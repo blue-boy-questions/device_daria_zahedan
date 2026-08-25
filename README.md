@@ -15,7 +15,7 @@ CPU     | 2x 2.6 GHz ARM Cortex-A78, 6x 2.0 GHz ARM Cortex-A55
 CHIPSET | MediaTek Dimensity 7050 (MT6877V)
 GPU     | ARM Mali-G68 MC4, 1000 MHz
 Memory  | 8 GB
-Shipped Android Version | 13
+Shipped Android Version | 15 (V6.7.2.0.BOND)
 Internal Storage | 256GB
 Battery | 4700 mAh, Li-Polymer
 Dimensions | 74 x 163 x 8 mm
